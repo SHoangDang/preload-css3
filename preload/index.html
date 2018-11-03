@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Preload</title>
+    <style>
+        body {
+            margin:0;
+            padding:0;
+            height: 100vh;
+            overflow: hidden;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .preload {
+            display: grid;
+            grid-template-columns: repeat(3,70px);
+            grid-template-rows: repeat(3,70px);
+            grid-gap: 5px;
+            animation: animationRotates 8s linear infinite;
+        }
+
+        .preload:nth-child(2) > div {
+            border-radius: 50%;
+        }
+        
+        .preload > div {
+            animation: animationScales 2s linear infinite ;
+        }
+
+        .preload > div:nth-child(7){
+            background-color: #FF9F27;
+            animation-delay: 0s;
+        }
+
+        .preload > div:nth-child(4), 
+        .preload > div:nth-child(8){          
+            background-color: #F17924;
+            animation-delay: 0.2s;
+        }
+
+        .preload > div:nth-child(1), 
+        .preload > div:nth-child(5),
+        .preload > div:nth-child(9){
+            background-color: #EB5620;
+            animation-delay: 0.4s;
+        }
+
+        .preload > div:nth-child(2), 
+        .preload > div:nth-child(6){
+            background-color: #F13D24;
+            animation-delay: 0.6s;
+        }
+
+        .preload > div:nth-child(3){
+            background-color: #F62537;
+            animation-delay: 0.8s;
+        }
+
+        @keyframes animationScales {
+            0%, 100% {
+                transform: scale(0);
+            }
+            20% {
+                transform: scale(1);
+            }
+            80% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes animationRotates {
+            0%{ 
+                transform: rotate(0deg);
+            }
+            20% {
+                transform: rotate(0deg);
+            }
+            25%{
+                transform: rotate(90deg);
+            }
+            45%{
+                transform: rotate(90deg);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            70%{
+                transform: rotate(180deg);
+            }
+            75%{
+                transform: rotate(270deg);
+            }
+            95%{
+                transform: rotate(270deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="preload">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="preload">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+</body>
+</html>
